@@ -7,7 +7,7 @@ TARPGM=tar
 
 rm -rf dst
 mkdir dst
-(cd src; $TARPGM c *) | (cd dst;  tar x)
+(cd src; $TARPGM c *) | (cd dst;  python3 2tar.py x)
 if diff -r src dst
 then
     echo "success" >&2		# error msg to stdout
